@@ -25,7 +25,6 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
   compiler: {
