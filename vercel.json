@@ -3,7 +3,6 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm ci",
-  "nodeVersion": "18.x",
   "packageManager": "npm",
   "functions": {
     "app/**/*.tsx": {
