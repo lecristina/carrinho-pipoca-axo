@@ -1,8 +1,9 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install",
+  "installCommand": "npm ci",
+  "nodeVersion": "18.x",
   "functions": {
     "app/**/*.tsx": {
       "runtime": "nodejs18.x"
