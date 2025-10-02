@@ -3,6 +3,7 @@
 import { Suspense, lazy } from "react"
 import Header from "@/components/header"
 import Hero from "@/components/hero"
+import StatsSection from "@/components/stats-section"
 import ServicesSection from "@/components/services-section"
 import BenefitsSection from "@/components/benefits-section"
 import HowItWorks from "@/components/how-it-works"
@@ -20,6 +21,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Header />
       <Hero />
+      <StatsSection />
       <ServicesSection />
       <BenefitsSection />
       <HowItWorks />
