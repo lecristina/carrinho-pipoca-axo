@@ -21,6 +21,14 @@ const nextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  output: 'standalone',
+  swcMinify: true,
+  reactStrictMode: true,
+  trailingSlash: false,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
+  },
 };
 
 module.exports = nextConfig;
