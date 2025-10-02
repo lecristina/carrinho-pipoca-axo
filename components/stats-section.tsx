@@ -58,7 +58,7 @@ export default function StatsSection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-6 max-w-8xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -71,29 +71,36 @@ export default function StatsSection() {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:bg-white/90 w-64 h-48 flex flex-col justify-center items-center text-center">
-                  {/* Ícone decorativo */}
-                  <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-30 transition-opacity duration-300">
-                    <Icon className={`w-6 h-6 ${stat.color}`} />
+                <div className="relative p-8 rounded-3xl bg-gradient-to-br from-white via-white/95 to-wine/5 backdrop-blur-md border-2 border-wine/20 shadow-2xl hover:shadow-wine/20 transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-wine/10 group-hover:via-white/90 group-hover:to-gold/10 w-72 h-56 flex flex-col justify-center items-center text-center overflow-hidden">
+                  {/* Ícone decorativo com gradiente */}
+                  <div className="absolute top-6 right-6 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                    <div className="p-3 rounded-full bg-gradient-to-br from-wine/20 to-gold/20">
+                      <Icon className={`w-8 h-8 ${stat.color}`} />
+                    </div>
                   </div>
 
-                  {/* Número principal */}
-                  <div className="text-3xl md:text-4xl font-bold wine-accent mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {stat.number}
+                  {/* Número principal com gradiente */}
+                  <div className="text-4xl md:text-5xl font-bold mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <span className="bg-gradient-to-r from-wine via-gold to-mint bg-clip-text text-transparent">
+                      {stat.number}
+                    </span>
                   </div>
 
-                  {/* Label */}
-                  <div className="text-base font-semibold text-foreground mb-1 group-hover:text-wine transition-colors duration-300">
+                  {/* Label com cor wine */}
+                  <div className="text-lg font-bold text-wine mb-2 group-hover:text-gold transition-colors duration-300">
                     {stat.label}
                   </div>
 
                   {/* Descrição */}
-                  <div className="text-xs text-foreground/60 leading-relaxed px-2">
+                  <div className="text-sm text-foreground/70 leading-relaxed px-3">
                     {stat.description}
                   </div>
 
-                  {/* Linha decorativa */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-wine via-gold to-mint rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Linha decorativa animada */}
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-wine via-gold to-mint rounded-b-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Efeito de brilho no hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12" />
                 </div>
 
                 {/* Efeito de brilho no hover */}

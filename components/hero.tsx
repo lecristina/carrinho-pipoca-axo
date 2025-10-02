@@ -168,25 +168,25 @@ export default function Hero() {
         }}
       />
 
-      {/* Partículas de luz flutuantes */}
-      {[...Array(12)].map((_, i) => (
+      {/* Partículas de luz flutuantes suaves */}
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={`particle-${i}`}
-          className="absolute w-2 h-2 bg-white/30 rounded-full z-20"
+          className="absolute w-1.5 h-1.5 bg-white/20 rounded-full z-20"
           style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
+            top: `${20 + i * 10}%`,
+            left: `${15 + i * 12}%`,
           }}
           animate={{
-            y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
-            opacity: [0.3, 0.8, 0.3],
-            scale: [0.5, 1, 0.5],
+            y: [0, -15, 0],
+            x: [0, 5, 0],
+            opacity: [0.2, 0.5, 0.2],
+            scale: [0.8, 1.2, 0.8],
           }}
           transition={{
-            duration: 3 + Math.random() * 2,
+            duration: 4 + i * 0.5,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: i * 0.3,
             ease: "easeInOut"
           }}
         />
@@ -302,23 +302,23 @@ export default function Hero() {
         }}
       />
 
-      {/* Estrelas piscantes */}
-      {[...Array(8)].map((_, i) => (
+      {/* Estrelas piscantes suaves */}
+      {[...Array(6)].map((_, i) => (
         <motion.div
           key={`star-${i}`}
-          className="absolute w-1 h-1 bg-white rounded-full z-20"
+          className="absolute w-1 h-1 bg-white/60 rounded-full z-20"
           style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
+            top: `${25 + i * 15}%`,
+            left: `${20 + i * 15}%`,
           }}
           animate={{
-            opacity: [0, 1, 0],
-            scale: [0, 1.5, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 2 + Math.random() * 2,
+            duration: 3 + i * 0.4,
             repeat: Infinity,
-            delay: Math.random() * 3,
+            delay: i * 0.5,
             ease: "easeInOut"
           }}
         />
