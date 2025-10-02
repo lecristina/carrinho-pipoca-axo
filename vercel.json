@@ -1,6 +1,1 @@
-{
-  "buildCommand": "chmod +x build.sh && ./build.sh",
-  "outputDirectory": ".next",
-  "framework": "nextjs",
-  "installCommand": "npm ci"
-}
+{}
