@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['v0.blob.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'v0.blob.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     unoptimized: false,
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -21,6 +28,14 @@ const nextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  output: 'standalone',
+  swcMinify: true,
+  reactStrictMode: true,
+  trailingSlash: false,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
+  },
 };
 
 module.exports = nextConfig;
